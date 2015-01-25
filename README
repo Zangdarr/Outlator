@@ -1,0 +1,36 @@
+Quoi ?
+Une application servant d'assistant lors de traduction.
+
+Pour qui ?
+Les traducteurs de manga (dans un premier temps)
+
+Comment ?
+- reconstitution de la structure du manga (répartition des cases dans une page, répartition des bulles de dialogues dans les pages)
+- intéraction avec chacune des bulles (contenu initiale, contenu traduit, commentaires)
+- stockage des informations dans le temps (nom manga, livre, page, case, bulle, contenu bulle)
+- fichier log pour les bugs
+- test /!\
+
+
+Versions :
+1 - version texte, dans cette version on part du principe que le traducteur à le manga avec lui et qu'il suit l'ordre de lecture. Il fournir des informations spécfiques aux nom/tome/page/case/bulle ainsi que le contenu de chaque des bulle. 
+2 - version texte, dans cette version le traducteur peut choisir le manga sur lequel travailler, il peut appliquer des modifications à ce qui à été fait précédemment.
+3 - version texte avec un affichage graphique, creation d'une nouvelle donnée qui va être stocké : position,  creation d'une visionneuse de page basique qui découpera la page en fonction des informations référencant cette page. En cliquant sur une bulle on aura accès aux informations en lecture.
+4 - version 3 + modification des informations via la visionneuse et un bouton valider les modifications.
+5 - version graphique, interface pour choisir le manga, visionneuse intégré (ou non), affichage des informations des bulles plus agréables (jusqu'à présent j'imaginais des lignes csv donc pas très cool)
+
+
+Fonctionnalités avancées :
+- création d'une nouvelle page : - soit choix d'un templates généré à partir d'informations (nombre de cases) + choix d'un templates de case à partir d'informations (nombre de bulles)
+                                 - soit création à partir d'une palette (case, bulle) et agencement automatique.
+
+
+
+
+Idées de conception :
+- csv : une ligne avec les informations du manga (nom manga, tome, auteur,..., nombre de pages)
+        une ligne pour chaque page (numero de page, nombre de cases )(version avancé : templates)
+	une ligne pour chaque case (numero de case, nombre de bulles)(version avancé : templates) 
+        une ligne pour chaque bulle avec le contenu en rapport à la traduction
+
+
