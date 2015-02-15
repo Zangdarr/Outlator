@@ -22,6 +22,17 @@ class Mode_edition:
             print(action + "  OK\n")
             self.notfinish = False
         
+    def choose_action(self):
+        interact_user = Interactions.Interactions_with_user()
+        actions = self.get_actions()
+        result = ""
+        print("List of actions :\n")
+        for x in range(0, actions[0]):
+            result = result + "\t" + str(x + 1) +" "+ (actions[1])[x] + "\n"
+        print(result + "\n\n")
+        choice = interact_user.generic_choose(actions[0])
+        return choice
+        
         
         
 class Mode_reading:
