@@ -33,6 +33,10 @@ class Mode_edition:
         choice = interact_user.generic_choose(actions[0])
         return choice
         
+    def get_actions(self):
+        quantity = 3
+        action = ["Nopee", "Nopeee","Quit"]
+        return (quantity, action)
         
         
 class Mode_reading:
