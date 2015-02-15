@@ -13,7 +13,21 @@ class Interactions_with_user:
         '''
         Empty        
         '''
-
+    
+    def generic_choose(self,quantity):
+        print("Enter the number from 1 to " + str(quantity) + "\n")
+        while(True):
+            choice = input("Your choice : ")
+            if(not(str.isnumeric(choice))):
+                print("The entry is not a numeric. Please choose a number from 1 to "+ str(quantity) + "\n")
+                continue
+            if(int(choice) < 1 or int(choice) > quantity):
+                print("Entry incorrect, please choose a number from 1 to "+ str(quantity) + "\n")
+                continue
+            break
+        
+        return choice
+        
     def choose_your_mode(self):
         '''
         Ask the user about the action he want to do : edition or reading.
