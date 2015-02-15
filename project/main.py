@@ -5,6 +5,9 @@
 
 import Interactions
 
+def mode_launcher(self, mode):
+    print("The mode you choosed will be launch.\n\n")
+
 def edition_mode(self):
     print("You are in the edition mode.\n\n")
 
