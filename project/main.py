@@ -5,14 +5,10 @@
 
 import Interactions
 
-def mode_launcher(self, mode):
+def mode_launcher(mode):
     print("The mode you choosed will be launch.\n\n")
 
-def edition_mode(self):
-    print("You are in the edition mode.\n\n")
 
-def reading_mode(self):
-    print("You are in the reading mode.\n\n")
     
 if __name__ == '__main__':
     
