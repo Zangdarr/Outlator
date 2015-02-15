@@ -76,3 +76,13 @@ class Interactions_with_database:
         self.c.execute("SELECT * FROM Mangas")
         print(self.c.fetchone())
         
+    def create_new_ligne(self, table, parameters, values):
+        self.c.execute("SELECT count(ID_mangas) FROM Mangas")
+        new_ID = self.c.fetchone()
+        #new_ID = new_ID[0] +1
+        parameters = ('ID_' + table,) + parameters
+        print(parameters)
+        query = "INSERT INTO " + table + str(parameters) +  ' VALUES ' + str((new_ID[0],) + values)
+        print(query)
+        self.c.execute(query)
+        
