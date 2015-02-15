@@ -7,11 +7,11 @@ Created on Sun Feb 15 16:58:55 2015
 
 class Mode_edition:
     
-    def edition_mode():
+    def edition_mode(self):
         print("You are in the edition mode.\n\n")
         
         
 class Mode_reading:
     
-    def reading_mode():
-    print("You are in the reading mode.\n\n")
+    def reading_mode(self):
+        print("You are in the reading mode.\n\n")
