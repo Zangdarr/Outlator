@@ -7,7 +7,9 @@ import Interactions
 
 def edition_mode(self):
     print("You are in the edition mode.\n\n")
-    
+
+def reading_mode(self):
+    print("You are in the reading mode.\n\n")
     
 if __name__ == '__main__':
     
