@@ -63,3 +63,11 @@ class Interactions_with_database:
 
     def close_database(self):
         self.conn.close()
+
+    def generate_database(self):
+        '''
+        This function will generate the two "main" tables.
+        '''
+        self.c.execute("CREATE TABLE Mangas (ID_mangas integer primary key, Name_manga varchar unique, Author varchar, Resume varchar)")
+        self.c.execute("CREATE TABLE Tomes  (ID_tomes integer primary key, ID_manga integer, Page_number integer, Case_number integer, Bubbles_number integer, Contenu_initial varchar, Contenu_traduction varchar, Commentaires varchar, FOREIGN KEY(ID_manga) REFERENCES Mangas(ID_manga))")
+        
