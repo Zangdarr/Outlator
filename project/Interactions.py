@@ -6,7 +6,9 @@ Created on Sun Jan 25 14:22:34 2015
 """
 
 class Interactions_with_user:
-
+    '''
+    This class is the palette of interactions that the system can have with the user.
+    '''
     def __init__(self):
         '''
         Empty        
@@ -29,9 +31,25 @@ class Interactions_with_user:
         return mode[0]
 
 
+import sqlite3
+
+
 class Interactions_with_database:
+    '''
+    This class is the palette of interactions that the system can have with the database.
+    '''
+
+    conn = 0
+    c = 0
     
     def __init__(self):
         '''
         Empty
         '''
+        
+        #connection to the database
+        self.conn = sqlite3.connect('database.db')
+        #recuperation of a "Cursor" to execute SQL commands
+        self.c = self.conn.cursor()
+
+
