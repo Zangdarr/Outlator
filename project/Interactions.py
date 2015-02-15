@@ -71,3 +71,8 @@ class Interactions_with_database:
         self.c.execute("CREATE TABLE Mangas (ID_mangas integer primary key, Name_manga varchar unique, Author varchar, Resume varchar)")
         self.c.execute("CREATE TABLE Tomes  (ID_tomes integer primary key, ID_manga integer, Page_number integer, Case_number integer, Bubbles_number integer, Contenu_initial varchar, Contenu_traduction varchar, Commentaires varchar, FOREIGN KEY(ID_manga) REFERENCES Mangas(ID_manga))")
         
+
+    def get_list_manga(self):
+        self.c.execute("SELECT * FROM Mangas")
+        print(self.c.fetchone())
+        
