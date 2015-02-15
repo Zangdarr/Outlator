@@ -53,3 +53,10 @@ class Interactions_with_database:
         self.c = self.conn.cursor()
 
 
+
+    def save_modification(self):
+        
+        '''
+        Valide the modification done.
+        '''
+        self.conn.commit()
