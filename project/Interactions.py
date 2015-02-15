@@ -60,3 +60,6 @@ class Interactions_with_database:
         Valide the modification done.
         '''
         self.conn.commit()
+
+    def close_database(self):
+        self.conn.close()
